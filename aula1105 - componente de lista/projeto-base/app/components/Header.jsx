@@ -10,21 +10,39 @@ export default function Header({ titulo }) {
 }
 
 const estilos = StyleSheet.create({
+  wrapper: {
+    backgroundColor: "#7C3AED",
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    overflow: "hidden",
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: 5,
+
+    elevation: 6,
+  },
+
   container: {
-    backgroundColor: "#f528dd", // preto
-    paddingVertical: 20,
-    paddingHorizontal: 16,
+    paddingTop: 20,
+    paddingBottom: 16,
+    paddingHorizontal: 20,
     alignItems: "center",
   },
 
   titulo: {
-    fontSize: 24,
-    fontWeight: "700",
-    color: "white",
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#000000",
   },
 
   subtitulo: {
-    fontSize: 14,
-    color: "#ffffff",
+    fontSize: 13,
+    color: "#626262",
+    marginTop: 4,
   },
 });
