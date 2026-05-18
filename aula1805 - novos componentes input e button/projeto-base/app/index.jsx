@@ -13,7 +13,16 @@ export default function Index() {
 
   return (
     <ScrollView>
-      <Image />
+      <Image
+        source={Logo}
+        resizeMethod='contain'
+      />
+      <Text style={estilos.titulo}>Login</Text>
+      <Text style={estilos.sub}>Para prosseguir insira seus dados</Text>
     </ScrollView>
   );
 };
+
+const estilos = StyleSheet.create({
+
+});
