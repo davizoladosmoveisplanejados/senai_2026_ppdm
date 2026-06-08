@@ -14,35 +14,38 @@ const Tabs = createBottomTabNavigator();
 const Draw = createDrawerNavigator();
 
 function abasInferiores(){
-    <Tabs.Navigator
-        screenOptions={({route}) => ({
-            headerShown: true,
-            tabBarActiveTintColor: '#FF914D',
-            tabBarInactiveTintColor: '#777',
-            tabBarIcon: ({color, size, facused}) => {
-                let nomeIcone = 'elipse-outline';
-                
-                if(route.name === 'Atendimentos'){
-                    nomeIcone = focused ? 'calendar' : 'calendar-outline';
-                };
-                if(route.name === 'Profissionais'){
-                    nomeIcone = focused ? 'people' : 'people-outline';
+    return(
+        <Tabs.Navigator
+            screenOptions={({route}) => ({
+                headerShown: true,
+                tabBarActiveTintColor: '#FF914D',
+                tabBarInactiveTintColor: '#777',
+                tabBarIcon: ({color, size, focused}) => {
+                    let nomeIcone = 'elipse-outline';
+                    
+                    if(route.name === 'Atendimentos'){
+                        nomeIcone = focused ? 'calendar' : 'calendar-outline';
+                    };
+                    if(route.name === 'Profissionais'){
+                        nomeIcone = focused ? 'people' : 'people-outline';
+                    }
+                    return <Ionicons name={nomeIcone} size={size} color={color} />
                 }
-                return <Ionicon name={nomeIcone} size={size} color={color} />
-            }
-        })}
-    >
-        <Tabs.Screen name='Atendimentos' component={<Atendimentos />} />
-        <Tabs.Screen name='Profissionais' component={<Profissionais />} />
-    </Tabs.Navigator>
+            })}
+        >
+            <Tabs.Screen name='Atendimentos' component={Atendimentos} />
+            <Tabs.Screen name='Profissionais' component={Profissionais } />
+        </Tabs.Navigator>
+    );
 };
 function menuSuperior(){
+    return(
     <Draw.Navigator
         screenOptions={({route}) => ({
             headerShown: true,
-            tabBarActiveTintColor: '#FF914D',
-            tabBarInactiveTintColor: '#777',
-            tabBarIcon: ({color, size, facused}) => {
+            drawerActiveTintColor: '#FF914D',
+            drawerInactiveTintColor: '#777',
+            drawerIcon: ({color, size, focused}) => {
                 let nomeIcone = 'menu-outline';
                 
                 if(route.name === 'Atendimentos'){
@@ -51,15 +54,17 @@ function menuSuperior(){
                 if(route.name === 'Profissionais'){
                     nomeIcone = focused ? 'people' : 'people-outline';
                 }
-                return <Ionicon name={nomeIcone} size={size} color={color} />
+                return <Ionicons name={nomeIcone} size={size} color={color} />
             }
         })}
     >
-        <Draw.Screen name='Início' component={<abasInferiores />} />
-        <Draw.Screen name='Atendimentos' component={<Atendimentos />} />
-        <Draw.Screen name='Profissionais' component={<Profissionais />} />
+        <Draw.Screen name='Inicio' component={abasInferiores } />
+        <Draw.Screen name='Atendimentos' component={Atendimentos } />
+        <Draw.Screen name='Profissionais' component={Profissionais } />
     </Draw.Navigator>
+    );
 };
+
 
 export default function Rotas(){
     return(
