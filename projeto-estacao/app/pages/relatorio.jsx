@@ -14,28 +14,28 @@ export default function Relatorio() {
       horario: "12:00",
       temperatura: "26°C",
       umidade: "67%",
-      qualidade: "Boa",
+      vento: "25Km/h",
     },
     {
       id: "2",
       horario: "13:00",
       temperatura: "27°C",
       umidade: "69%",
-      qualidade: "Boa",
+      vento: "35Km/h",
     },
     {
       id: "3",
       horario: "14:00",
       temperatura: "28°C",
       umidade: "64%",
-      qualidade: "Boa",
+      vento: "67Km/h",
     },
     {
       id: "4",
       horario: "15:00",
       temperatura: "29°C",
       umidade: "63%",
-      qualidade: "Média",
+      vento: "15Km/h",
     },
   ];
 
@@ -64,7 +64,7 @@ export default function Relatorio() {
             <Text style={estilos.info}>💧 Umidade: {item.umidade}</Text>
 
             <Text style={estilos.info}>
-              🌤 Qualidade do Ar: {item.qualidade}
+              🌤 Velocidade do Vento: {item.vento}
             </Text>
           </View>
         )}
