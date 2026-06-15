@@ -38,7 +38,7 @@ function MenuSuperior() {
       })}
     >
       <Draw.Screen
-        name="Estação Meteorológica"
+        name="Início"
         component={Dashboard}
         options={{ headerTitleAlign: "center" }}
       />
@@ -59,12 +59,12 @@ export default function Rotas() {
       <Stack.Screen
         name="Registro"
         component={Registro}
-        options={{ title: "Registro" }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Início"
         component={MenuSuperior}
-        options={{ headerShown: false, title: "" }}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

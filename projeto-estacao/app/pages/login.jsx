@@ -1,11 +1,11 @@
 import { useState } from "react";
 import {
-    Image,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import Img from "../../assets/img.jpg";
 
@@ -38,7 +38,7 @@ export default function Login({ navigation }) {
 
         <TouchableOpacity
           style={estilos.botao}
-          onPress={() => navigation.replace("Inicio")}
+          onPress={() => navigation.replace("Início")}
         >
           <Text style={estilos.textoBotao}>Entrar</Text>
         </TouchableOpacity>
